@@ -7,8 +7,10 @@ int knobValue = 100;
 
 Knob val;
 int c1,c2, n;
-float bar0;
-PGraphics pg_bar0;
+float bar0, 
+      global_bar = 0;
+PGraphics pg_bar0,
+          pg_people_bar_1;
 PImage img,img2;
 PImage people0;
 
@@ -19,8 +21,13 @@ void setup() {
   //   size(displayWidth, displayHeight, P3D ); // FOR SPEED
   img = loadImage("T08TQ7ic.png");
   img.resize(100, 100);
+  
   noStroke();
+  
   pg_bar0 = createGraphics(100,240);
+  pg_people_bar_1 = createGraphics(300,240);
+  
+  
   cp5 = new ControlP5(this);
   cp5.addButton("New_people")
      .setValue(0)
@@ -38,12 +45,12 @@ void setup() {
                .snapToTickMarks(true)
                .setDragDirection(Knob.HORIZONTAL)
                ;
-  cp5.addButton("Add-to-screen")
+  cp5.addButton("Add_to_screen")
      .setValue(0)
      .setPosition(0,160)
      .setSize(200,19)
      ;
-  cp5.addButton("Add-to-energy")
+  cp5.addButton("Add_to_energy")
      .setValue(0)
      .setPosition(0,189)
      .setSize(200,19)
