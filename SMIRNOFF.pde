@@ -4,7 +4,7 @@ ControlP5 cp5;
 
 int myColor = color(255);
 int knobValue = 100;
-int c1,c2, n, count, count2_click_add_energy;
+int c1,c2, n, count, count2_click_add_energy, count3_add_pic_bar;
 
 Knob val;
 
@@ -33,6 +33,7 @@ void setup() {
   
   count = 0;
   count2_click_add_energy = 0;
+  count3_add_pic_bar = 0;
   global_bar = 0;
   
   pg_bar0 = createGraphics(100,240);
