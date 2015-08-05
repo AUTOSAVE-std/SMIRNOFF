@@ -25,7 +25,7 @@ PImage people0;
 void setup() {
 
 //  size(displayWidth, displayHeight );
-  size(displayWidth, displayHeight, P3D ); // FOR SPEED
+  size(displayWidth, displayHeight ); // FOR SPEED
   img = loadImage("T08TQ7ic.png");
   img.resize(100, 100);
   
