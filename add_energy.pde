@@ -28,11 +28,11 @@ void pg_bar_4_L(){
   
 }
 void pg_bar_5_R(){
-  
+  float g = convert_v(global_bar);
   pg_bar_5_R.beginDraw();
   pg_bar_5_R.background(0);
   pg_bar_5_R.fill(198,0,50);
-  pg_bar_5_R.rect(0,300,190,-bar0*2);
+  pg_bar_5_R.rect(0,300,190,-g);
   pg_bar_5_R.fill(255);
   pg_bar_5_R.text("ENERGY BAR 5", 0, 320);
   pg_bar_5_R.text("RIGHT", 0, 335);
@@ -40,13 +40,14 @@ void pg_bar_5_R(){
   image(pg_bar_5_R,displayWidth-225,300);
 }
 void pg_bar_2_energy(){
+  float g = convert_v(global_bar);
   pg_bar_2_energy.beginDraw();
   pg_bar_2_energy.background(0);
   pg_bar_2_energy.fill(198,0,50);
-  pg_bar_2_energy.rect(0,300,190,-bar0*2);
+  pg_bar_2_energy.rect(0,300,190,-g);
   pg_bar_2_energy.fill(255);
   pg_bar_2_energy.text("ENERGY BAR 2", 0, 320);
-  pg_bar_2_energy.text("ENERGY", 0, 335);
+  pg_bar_2_energy.text("ENERGY MAIN", 0, 335);
   pg_bar_2_energy.endDraw();
   image(pg_bar_2_energy,displayWidth-(225*2-20),300);
 }
