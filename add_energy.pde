@@ -64,10 +64,11 @@ void pg_bar_3_picture(){
   println("----"+i+"--------");
   
   pg_bar_3_picture.beginDraw();
-
+  pg_bar_3_picture.fill(0);
+  pg_bar_3_picture.rect(0,305,100,50);
   pg_bar_3_picture.fill(255);
-  pg_bar_3_picture.text("ENERGY BAR 2", displayWidth-(225*3-10), 320);
-  pg_bar_3_picture.text("PICTURE", displayWidth-(225*3-10), 335);
+  pg_bar_3_picture.text("ENERGY BAR 2", 0, 320);
+  pg_bar_3_picture.text("PICTURE", 0, 335);
   pg_bar_3_picture.image(img2, j, 335-(40+40*k), 40, 40 );
   pg_bar_3_picture.endDraw();
   image(pg_bar_3_picture,displayWidth-(225*3-10),300);
